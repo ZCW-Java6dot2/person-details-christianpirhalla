@@ -13,14 +13,21 @@ public class PersonHandler {
     public String whileLoop() {
         String result = "";
         // create a `counter`
+        int i = 0;
         // while `counter` is less than length of array
+        while (i < personArray.length) {
             // begin loop
 
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
+            // use `counter` to identify the `current Person` in the array
+            Person fella = personArray[i];
+            // get `string Representation` of `currentPerson`
+            String desc = fella.toString();
+            // append `stringRepresentation` to `result` variable
+            result += desc;
+            i++;
 
             // end loop
+        }
         return result;
     }
 
@@ -33,12 +40,16 @@ public class PersonHandler {
         // identify increment
 
         // use the above clauses to declare for-loop signature
+        for (int i = 0; i < personArray.length; i++) {
             // begin loop
-                // use `counter` to identify the `current Person` in the array
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
+            // use `counter` to identify the `current Person` in the array
+            Person fella = personArray[i];
+            // get `string Representation` of `currentPerson`
+            String desc = fella.toString();
+            // append `stringRepresentation` to `result` variable
+            result += desc;
             // end loop
-
+        }
         return result;
     }
 
@@ -50,11 +61,14 @@ public class PersonHandler {
         // identify array's variable-name
 
         // use the above discoveries to declare for-each-loop signature
+        for (Person p : personArray) {
             // begin loop
-                // get `string Representation` of `currentPerson`
-                // append `stringRepresentation` to `result` variable
+            // get `string Representation` of `currentPerson`
+            String desc = p.toString();
+            // append `stringRepresentation` to `result` variable
+            result += desc;
             // end loop
-
+        }
         return result;
     }
 
